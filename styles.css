@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap');
+
+@font-face {
+    font-family: "Happy-Day";
+    src: url("/fonts/Happy-Day.ttf");
+  }
+
+body {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+/*ORGANISATION DE LA PAGE*/
+
+.lignes{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.colonnes{
+    display: flex;
+    flex-direction: column;
+}
+
+/*TEXTES*/
+
+h2{
+    font-size: 35px;
+    margin: 0;
+    text-transform: uppercase;
+    color: #1f8dc9;
+    font-family: "Happy-Day";
+    letter-spacing: 3px;
+    padding-top: 4px;
+}
+
+h3{
+    font-size: 20px;
+    margin: 0;
+    padding: 10px;   
+    margin-top: 10px;
+}
+
+p{
+    font-size: 18px;
+    margin: 0;
+    padding: 10px 20px 10px 20px;
+}
+
+#scientific_name{
+    font-style: italic;
+    font-size: 14px;
+    margin: 0;
+}
+
+#author{
+    font-style: italic;
+    font-size: 14px;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    align-items:  center;
+}
+
+#containerQuote{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*IMAGES*/
+
+#img{
+    border-radius: 20px;
+    height: 500px;
+    width: 90%;
+    margin: auto;
+}    
+
+.imageForet{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#pictoRadio{
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.picto{
+    width: 40px;
+    margin-right: 10px;
+}
+
+/*DIMENSIONS*/
+
+iframe{
+    width: 95%;
+    margin: auto;
+}
+
+#factOfTheDay{
+    max-height: 240px;
+}
+
+#quoteOfTheDay{
+    height: 240px;
+}
+
+#trefle{
+    height: 680px;
+    padding-bottom: 10px;
+}
+
+#radio{
+    height: 320px;
+}
+
+#fluxRSSPodcast{
+    height: 470px;
+}
+
+#fluxRSSInfos{
+    height: 390px;
+}
+
+#numberOfTheDay{
+    height: 200px;
+}
+
+#blocNote{
+    height: 300px;
+}
+
+.pictoPlayer{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#pictoPlayer1{
+    margin-top: 25px;
+}
+
+.titre{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: rgba(119, 179, 212, 0.1);
+    border-radius: 20px 20px 0 0;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.pictoTitre{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/*BOUTONS*/
+
+button{
+    border-radius: 50px;
+    border: none;
+    padding: 3px;
+    background-color: white;
+    cursor: pointer;
+}
+
+button:active{
+    transform: scale(0.9);
+}
+
+.buttonNewInfo{
+    background-color: transparent;
+    text-align: right;
+    padding: 25px 20px 0 0;
+;}
+
+#buttonQuote, #buttonFact, #buttonPlant, #buttonRadio, #buttonNumber{
+    align-self: center;
+    padding: 15px;
+    font-size: 20px;
+    opacity: 0.9;
+    margin-top: 10px;
+    border-radius: 50px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+
+.refreshButton{
+	position: absolute;
+	transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.refresh-button {
+    font-family: "Happy-Day";
+    float: right;
+    color: #77B3D4;
+	background-color: white;
+	border: none;
+    position: relative;
+	overflow: hidden;
+	transition: transform 500ms ease;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+.refresh-button::before {
+	content: "";
+	background-color: #77B3D4;
+	width: 0%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: width 500ms ease;
+}
+
+.refresh-button::after {
+	content: "";
+	background-image: url("images/pictos/refresh_blanc.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100%;
+	width: 0%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: width 500ms ease;
+}
+
+.refresh-button:hover:before,
+.refresh-button:hover:after {
+	width: 100%;
+}
+
+.refresh-button:active {
+	transform: scale(0.9);
+}
+
+
+/*RETOURNER LES BLOCS*/
+
+.bloc{
+    margin: 10px;
+    width: 420px;
+    height: 400px;
+}
+
+.cardBox {
+    margin: 10px;
+    width: 420px;
+    height: 400px;
+    
+    perspective: 800px;
+    transition: all 0.3s ease 0s;
+}
+  
+.cardBox:hover .card {
+    transform: rotateY( 180deg);
+}
+  
+.card {
+    width: 100%;
+    height: 100%;
+
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease 0s;
+    -webkit-animation: giro 2.5s 1;
+    animation: giro 2.5s 1;
+}
+  
+.front, .back {
+    position: absolute;
+    backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.front{
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+  
+.back {
+    transform: rotateY( 180deg);
+    color: white;
+    /* background-image: url("images/foret.jpg"); */
+    /* background-size: cover; */
+}
+
+#numberOfTheDay .back{
+    background-image: url("images/animaux/pexels-pixabay-459215.jpg");
+    background-size: cover;
+}
+#factOfTheDay .back {
+    background-image: url("images/animaux/pexels-kat-smith-568020.jpg");
+    background-size: cover;
+}
+
+#quoteOfTheDay .back {
+    background-image: url("images/animaux/pexels-lumn-406014.jpg");
+    background-size: cover;
+}
+
+#trefle .back {
+    background-image: url("images/animaux/pexels-josiah-farrow-3396657.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+#radio .back {
+    background-image: url("images/animaux/pexels-markus-distelrath-2233442.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+  
+  @-webkit-keyframes giro {
+    from {
+      transform: rotateY( 180deg);
+    }
+    to {
+      transform: rotateY( 0deg);
+    }
+  }
+  
+  @keyframes giro {
+    from {
+      transform: rotateY( 180deg);
+    }
+    to {
+      transform: rotateY( 0deg);
+    }
+  }
+
+
+
+
+
+  #content {
+    margin: 0;
+    padding: 0 10px 10px 10px;
+    height: 80%;
+    text-align: left;
+    font-size: 18px;
+    transition: background-color .2s ease-out;
+    border-radius: 0  0 22px 22px;
+  }
+
+li{
+    list-style: url('/images/pictos/puce.png');
+    padding: 0 0 10px 0;
+  }
+  
+  #content[contenteditable=true] {
+    background-color: white;
+    transition: background-color .2s ease-in;
+  }
+  
+  [contenteditable]:focus {
+    outline: 0px solid transparent;
+  }

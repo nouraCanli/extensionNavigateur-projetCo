@@ -1,0 +1,48 @@
+{
+    "manifest_version": 3,
+    "name": "Green Dashboard",
+    "description": "Un article, un chiffre, un podcast... autour de l'écologie. Bonus : remplacez les images d'une page par une photo de forêt !",
+    "version": "1.0",
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "chrome_url_overrides" : {
+        "newtab": "index.html"
+    },
+    "action": {
+      "default_icon": {
+          "16": "images/icon-16.png",
+          "32": "images/icon-32.png",
+          "48": "images/icon-48.png",
+          "128": "images/icon-128.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": [ "images/*.jpg" ],
+        "matches": [ "http://*/*", "https://*/*" ]
+      }
+    ],
+    "icons": {
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "48": "images/icon-48.png",
+      "128": "images/icon-128.png"
+    }
+}
